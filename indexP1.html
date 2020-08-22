@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/EstiloFormulario.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script defer src="Scripts/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <figure class="figureHeader">
+            <img src="https://cdn.bitrix24.com/b2987855/landing/4cb/4cb312d3f48e4a19f72e8d7677119194/parquesoftboglogo.png" alt="LogoParque">
+        </figure>
+        <div class="progresbar">
+            <div class="step">
+                <p>Queremos conoserte</p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="chek fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Cumples el perfil?</p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="chek fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Elige tu membresia</p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="chek fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Genera tu carnet</p>
+                <div class="bullet">
+                    <span>4</span>
+                </div>
+                <div class="chek fas fa-check"></div>
+            </div>
+        </div>
+    </header>
+    <div class="contenedorForm">
+        <form action="#" class="form">
+    <!--------------------- PAGINA1 INFO BASICA ------------------>        
+            <div  id="p1" class="Section slidepage">
+                <div class="divImg">
+                    <figure class="figureMembrecia">
+                        <img class="img" src="https://lh4.googleusercontent.com/cMbTlxEGqiS_cRsVj4BgfxO0WzXvcIaBmjN65jZJdNKfXcoQ4-5TeYwqIgDcQdQiT7cTXS98jwFqvLdykt3RI-_AlESmDsVtQvpZOp7OjJYkVJDa4ltfQVeJb65rOgFPmpL-SWCTTIU" alt="">
+                    </figure>
+                </div>
+                <div class="description">
+                    <div>
+                        <h2>Queremos conoserte</h2>
+                   </div>
+                    <div class="InfoInput">
+                       <p>¿Cual es tu nombre?</p><input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="InfoInput">
+                        <p>¿Tu numero de celular?</p><input type="text" name="numCel" id="numCel" placeholder="Numero Celular" pattern=[0-9]{2,}>
+                    </div>
+                    <div class="InfoInput">
+                        <p>¿Cual es tu E-mail?</p><input type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div  class="InfoInput">
+                        <p>¿Tienes uan udea o empresa? Comparte su nombre</p><input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
+                    </div>
+                    <div class="InfoInput">   
+                        <p>Describe tu idea</p><input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+                    </div>
+                    <div class="buttonform nextBtn">
+                        <button class="nextBtn" onclick="desplazar()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+    <!---------------------- PAGINA2 SWITCHS --------------------->
+            <div class="Section">
+                <div class="divImg">
+                    <figure class="figureMembrecia">
+                        <img class="img" src="https://lh4.googleusercontent.com/cMbTlxEGqiS_cRsVj4BgfxO0WzXvcIaBmjN65jZJdNKfXcoQ4-5TeYwqIgDcQdQiT7cTXS98jwFqvLdykt3RI-_AlESmDsVtQvpZOp7OjJYkVJDa4ltfQVeJb65rOgFPmpL-SWCTTIU" alt="">
+                    </figure>
+                </div>
+                <div class="description">
+                    <div>
+                        <h2>¿Cumples con el perfil?</h2>
+                   </div>
+                    <div class="InfoInput">
+                       <p>¿El emprendimiento es tu opción de vida?</p>  
+                       <label class="switch">
+                            <input type="checkbox" name="nombre" id="check1">  
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="InfoInput">
+                        <p>¿Sabes que no eres el centro del universo,te gustaría emprender y aprender en comunidad? </p>
+                        <label class="switch">
+                            <input type="checkbox" name="nombre" id="check2"> 
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="InfoInput">
+                        <p>Al igual que todos los demás, estás dispuesto a poner a disposición tu conocimiento, expertise, tiempo y capital relacional a la comunidad.</p>
+                        <label class="switch">
+                            <input type="checkbox" name="nombre" id="check3"> 
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="buttonform">
+                        <button>Anterior</button>
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+            </div>
+    <!---------------------- PAGINA3 MEMBRECIAS ------------------>
+            <div class="SectionMem">
+    
+               <div class="Memheader">
+                   <h1 class="SectionMemH1">ADQUIERE TU MEMBRECIA POR UN AÑO</h1>
+                    <P class="SectionMemP">Valor total: $1.152.000 + IVA </P>
+               </div>
+    
+               <div class="memOptionsList">
+    
+                   <div class="memOption">
+                        <div class="p1">0%OFF</div>
+                        <div class="p2">
+                            <div class="divDeco1">
+                            </div>
+                            <div class="divDeco2">
+                                Pago mensual
+                            </div>
+                        </div>
+                        <div class="p3">$1.152.000 + IVA </div>
+                        <div class="p4">Equivalente a<b> $96.000 / mes</b> 12 Pagos de $96 por 12 meses</div>
+                        <div class="p5">
+                            <button class="btnPago">
+                               Paga Aqui
+                            </button>
+                        </div>
+                   </div>
+    
+                    <div class="memOption">
+                        <div class="p1">10%OFF</div>
+                        <div class="p2">
+                            <div class="divDeco1"></div>
+                            <div class="divDeco2">
+                                Pago Trimestral
+                            </div>    
+                        </div>
+                        <div class="p3">$1.036.000 + IVA </div>
+                        <div class="p4">Equivalente a<b> $86.000/mes</b>4 Pagos de $259 por 12 meses</div>
+                        <div class="p5">
+                            <button class="btnPago">
+                                Paga Aqui
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="memOption">
+                        <div class="p1">19%OFF</div>
+                        <div class="p2">
+                            <div class="divDeco1"></div>
+                            <div class="divDeco2">
+                                Pago Semestral
+                            </div>
+                        </div>
+                        <div class="p3">$932.000 + IVA </div>
+                        <div class="p4">Equivalente a <b> $78.000/mes</b>2 Pagos de $466 por 12 meses</div>
+                        <div class="p5">
+                            <button class="btnPago">
+                                Paga Aqui
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="memOption">
+                        <div class="p1">0%OFF</div>
+                        <div class="p2">
+                            <div class="divDeco1"></div>
+                            <div class="divDeco2">
+                                Pago Anual
+                            </div>
+                        </div>
+                        <div class="p3">$828.000 + IVA </div>
+                        <div class="p4">Equivalente a<b> $69.000/mes</b>1 Pago de $828 por 12 meses</div>
+                        <div class="p5">
+                            <button class="btnPago">
+                                Paga Aqui
+                            </button>
+                        </div>
+                    </div>
+    
+                </div>   
+            </div>
+    <!---------------------- PAGINA4 CARNETETE ------------------>
+            <div class="Section">
+                <div class="divImg">
+                    <figure class="figureMembrecia">
+                        <img class="img" src="https://lh4.googleusercontent.com/cMbTlxEGqiS_cRsVj4BgfxO0WzXvcIaBmjN65jZJdNKfXcoQ4-5TeYwqIgDcQdQiT7cTXS98jwFqvLdykt3RI-_AlESmDsVtQvpZOp7OjJYkVJDa4ltfQVeJb65rOgFPmpL-SWCTTIU" alt="">
+                    </figure>
+                </div>
+                <div class="description">
+                    <div>
+                        <h2>Queremos conoserte</h2>
+                </div>
+                    <div class="InfoInput">
+                    <p>¿Cual es tu nombre?</p><input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="InfoInput">
+                        <p>¿Tu numero de celular?</p><input type="text" name="numCel" id="numCel" placeholder="Numero Celular" pattern=[0-9]{2,}>
+                    </div>
+                    <div class="InfoInput">
+                        <p>¿Cual es tu E-mail?</p><input type="email" name="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div  class="InfoInput">
+                        <p>¿Tienes uan udea o empresa? Comparte su nombre</p><input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
+                    </div>
+                    <div class="InfoInput">   
+                        <p>Describe tu idea</p><input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+                    </div>
+                    <div class="buttonform">
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+    </footer>
+    
+</body>
+</html>
