@@ -23,6 +23,10 @@ color: #8eb38e;
         font-size: 23px;
         margin: auto;
         width: 190px;
+        transition: 0.2s;
+    }
+    .progresbar .step p.active{
+        color: #7eb400;
     }
     .progresbar .step .bullet{
         position: relative;
@@ -32,6 +36,11 @@ color: #8eb38e;
         border: 2px solid #000;
         display: inline-block;
         border-radius: 50%;
+        transition: 0.2s;
+    }
+    .progresbar .step .bullet.active{
+        border-color: #8eb336;
+        background-color: #daf34b;
     }
     .progresbar .step .bullet:before,
     .progresbar .step .bullet:after{
@@ -48,7 +57,7 @@ color: #8eb38e;
     .progresbar .step:last-child .bullet:after{
         display: none;
     }
-    .progresbar .step .bullet:after{
+    .progresbar .step .bullet.active:after{
         background: #789c3d;
         transform: scaleX(0);
         transform-origin:left;
@@ -59,13 +68,16 @@ color: #8eb38e;
             transform: scaleX(1);
         }
     }  
-    .progresbar .step span{
+    .progresbar .step .bullet span{
         font-weight: 600;
         font-size: 20px;
         line-height: 24px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .progresbar .step .bullet.active span{
+        display: none;
     }
     .progresbar .step .chek{
         display: none;
@@ -75,39 +87,41 @@ color: #8eb38e;
         font-size: 15px;
         transform: translate(-50%, -50%);
     }
+    .progresbar .step .chek.active{
+        display: block;
+        color: #acacac;
+    }
 /* ---------------------------------------------------------------------------------- */
 body{
     margin: 0;
     background-color: lavender;
 }
-.contenedorForm{
-/* overflow: hidden; */
-}
 .slidepage{
-    margin-left: auto;
 }
 .form{
     display: flex;
     background-color: #f4fbff;
-    margin: 0px auto;
+    margin: 0px 0px;
     /* justify-content: space-between; */
     /* flex-direction: column; */
-    border-radius: 5px;
     min-width: 800px;
     /* max-width: 80%; */
-    width: 400%;
+    width: 100%;
+    overflow: hidden;
+   
 }
 
 .Section{
     display: flex;
     justify-content: space-around;
-    margin: 0px auto;
+    margin-right: 200px;
+    margin-left: 200px;
     padding: 12px 40px;
-    background: #8eb38e;
-    width: 1000px;
+    background: #8eb336;
+    width: 100%;
+    min-width: max-content;
+    transition: margin-left 1s ease-in-out;
 }
-
-
 .InfoInput{
     display: flex;
 }
@@ -125,7 +139,7 @@ body{
     background-position-x: center;
 }
 
-/* <----------------Swirches------------------> */
+/* <----------------Switches------------------> */
 .switch{
     margin: auto 0px auto 30px;
     position: relative;
@@ -160,7 +174,6 @@ body{
 }
 input:checked + .slider{
     background-color: #2ab92a;  
-    
 }
 input:checked + .slider:before{
     transition: 1s;/* transicion a marcado*/
@@ -172,10 +185,11 @@ input:checked + .slider:before{
 .SectionMem{
     display: flex;
     justify-content: center;
-    margin: 0px auto;
-    padding: 20px 40px;
+    margin-right: 300px;
+    margin-left: 200px;
+    padding: 12px 40px;
     background: #c79904;
-    width: 1000px;
+    min-width: 1000px;
     flex-direction: column;
 }
 .Memheader{
@@ -252,7 +266,7 @@ justify-items: center;
     width: 10%;
     height: 31px;
     background: lightsteelblue;
-    align: none;
+    align-self: none;
     /* top: 4px; */
     margin: -7px 18px;
     border: 2px solid gray;
@@ -283,7 +297,6 @@ justify-items: center;
     object-fit: cover;
     margin: 0px 0px 0px -5px;
 }
-
 .form h2{
     color: white;
 }
