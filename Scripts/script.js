@@ -16,7 +16,22 @@ const bullet = document.querySelectorAll(".step .bullet");
 
 let max = 4;
 let current = 1;
-var p1  = document.getElementById('p1');
+
+function d1(){
+    alert("funciona");
+}
+function validar(){
+    var as = document.getElementsById('nombre').value;
+    
+    var numCel = document.getElementsByName("numCel").value;
+    var email = document.getElementsByName("email").value;
+    var empresa = document.getElementsByName("empresa").value;
+    alert(as);
+    if(as === ""){
+        alert("el campo nombre es requerido");
+    }
+};
+
 /* -------------NEXT---------------- */
 firtNextBtn.addEventListener("click",function(){
     slidePage.style.marginLeft = "-1233PX"
@@ -27,7 +42,7 @@ firtNextBtn.addEventListener("click",function(){
 });
 
 nextBtnSec.addEventListener("click",function(){
-    slidePage.style.marginLeft = "-2583px"
+    slidePage.style.marginLeft = "-2640px"
     bullet[current - 1].classList.add("active");
     progressText[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
@@ -71,7 +86,7 @@ prevBtnThird.addEventListener("click",function(){
 });
 
 prevBtnFourth.addEventListener("click",function(){
-    slidePage.style.marginLeft = "-2583px"
+    slidePage.style.marginLeft = "-2640px"
     bullet[current - 2].classList.remove("active");
     progressText[current - 2].classList.remove("active");
     progressCheck[current - 2].classList.remove("active");
@@ -79,8 +94,16 @@ prevBtnFourth.addEventListener("click",function(){
 });
 
 
-
-
+function mostrar(){
+    var archivo = document.getElementById("file").files[0];
+    var reader = new FileReader();
+    if (file) {
+      reader.readAsDataURL(archivo );
+      reader.onloadend = function () {
+        document.getElementById("img").src = reader.result;
+      }
+    }
+  }
 
 
 

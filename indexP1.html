@@ -57,23 +57,24 @@
                         <h2>Queremos conoserte</h2>
                    </div>
                     <div class="InfoInput">
-                       <p>¿Cual es tu nombre?</p><input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                       <label class="labelInput" for="nombre">¿Cual es tu nombre?</label><input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
                     </div>
                     <div class="InfoInput">
-                        <p>¿Tu numero de celular?</p><input type="text" name="numCel" id="numCel" placeholder="Numero Celular" pattern=[0-9]{2,} required>
+                        <label class="labelInput" for="numCel">¿Tu numero de celular?</label><input type="text" name="numCel" id="numCel" placeholder="Numero Celular" pattern=[0-9]{2,} required>
                     </div>
                     <div class="InfoInput">
-                        <p>¿Cual es tu E-mail?</p><input type="email" name="email" id="email" placeholder="E-mail">
+                        <label class="labelInput" for="email"> ¿Cual es tu E-mail?</label><input type="email" name="email" id="email" placeholder="E-mail">
                     </div>
                     <div  class="InfoInput">
-                        <p>¿Tienes uan udea o empresa? Comparte su nombre</p><input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
+                        <label class="labelInput" for="empresa">¿Tienes uan udea o empresa? Comparte su nombre</label><input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
                     </div>
                     <div class="InfoInput">   
-                        <p>Describe tu idea</p><input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
+                        <label class="labelInput" for="descripcion">Describe tu idea</label><input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
                     </div>
                     <div class="buttonform nextBtn">
-                        <button>Siguiente</button>
+                        <button onclick="validar()">Siguiente</button>
                     </div>
+                    <button onclick="validar()">Aqui</button>
                 </div>
             </div>
     <!---------------------- PAGINA2 SWITCHS --------------------->
@@ -200,37 +201,54 @@
                 </div> 
             </div>
     <!---------------------- PAGINA4 CARNETETE ------------------>
-            <div class="Section">
-                <div class="divImg">
-                    <figure class="figureMembrecia">
-                        <img class="img" src="https://lh4.googleusercontent.com/cMbTlxEGqiS_cRsVj4BgfxO0WzXvcIaBmjN65jZJdNKfXcoQ4-5TeYwqIgDcQdQiT7cTXS98jwFqvLdykt3RI-_AlESmDsVtQvpZOp7OjJYkVJDa4ltfQVeJb65rOgFPmpL-SWCTTIU" alt="">
-                    </figure>
-                </div>
-                <div class="description">
-                    <div>
-                        <h2>Queremos conoserte</h2>
-                </div>
-                    <div class="InfoInput">
-                    <p>¿Cual es tu nombre?</p><input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <div class="sectionCarnet">
+                <section class="tarjeta" id="tarjeta">
+                    <div class="delantera">   
+                        <div class="imgPerfil">
+                            <img class="img" id="img"/>
+                        </div>
+                        <div class="logo">
+                            <img class="img" src="https://lh3.googleusercontent.com/w01_1HNfzQKPgezIZ9tOklJd9z671E0WYzWuH35eK5kT9FP-Q_ze9SnzTbz4X9Ouu6Y5Set4aI5vPrZ6pNUxPAMmPOvqMJ2DDjPhy2TbzzvRGPL18roYMi_Ib2HZ0z7VvTwjj9IGdYg" alt="">
+                        </div>
+                        <div class="separador"></div>
+                        <div class="datosCarnet">
+                            <div class="grupo" id="nombres">
+                                <p class="label"> nombre</p>
+                                <p class="nombreCarnet">#######pedrito#######</p>
+                            </div>
+                            <div class="grupo" id="Cargo">
+                                <p class="label">cargo</p>
+                                <p class="cargo">soy???</p>
+                            </div>
+                            <div class="grupo" id="identifivcacion">
+                                <p class="label">C.C</p>
+                                <p class="cedula">C.C########</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="InfoInput">
-                        <p>¿Tu numero de celular?</p><input type="text" name="numCel" id="numCel" placeholder="Numero Celular" pattern=[0-9]{2,}>
+                    <div class="trasera">
+                        <div class="descripcionCarnet">
+                            <p>cMbTlxEGqiS_cRsVj4B gfxO0Wz X vcIaBmjN65jZJdNKf XcoQ4-5TeYwqI gDcQdQiT7cTX S98jwFq vLdy kt3RI-_AlESmDs VtQvpZOp 7OjJYkVJ Da4ltfQVeJ b65rOg FPmpL-SW CTTIU </p>
+                        </div> 
+                        <div class="seguridad">
+                            <div class="fecha"></div>
+                            <div class="codigoQR"></div>
+                        </div>
                     </div>
-                    <div class="InfoInput">
-                        <p>¿Cual es tu E-mail?</p><input type="email" name="email" id="email" placeholder="E-mail">
-                    </div>
-                    <div  class="InfoInput">
-                        <p>¿Tienes uan udea o empresa? Comparte su nombre</p><input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
-                    </div>
-                    <div class="InfoInput">   
-                        <p>Describe tu idea</p><input type="text" name="descripcion" id="descripcion" placeholder="Descripcion">
-                    </div>
+
+
+                </section>
+                <div>
+                    <input type="file" id="file" accept="image/*" onchange="mostrar()"/>
+                    <br>
+                    
                     <div class="buttonform">
                         <button class="prev-3">Anterior</button>
                         <button class="submit">Siguiente</button>
-                    </div>
+                     </div>
                 </div>
-            </div>
+                    
+                </div>
         </form>
     <footer>
     </footer>
