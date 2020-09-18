@@ -115,7 +115,7 @@ body{
     display: flex;
     justify-content: space-around;
     margin-right: 200px;
-    /* cambiar a 200-(-2000) */    margin-left: 200px;
+    /* cambiar a 200 */    margin-left: 200px;
     padding: 12px 40px;
     background: #8eb336;
     width: 100%;
@@ -407,10 +407,11 @@ justify-items: center;
     max-width: 100%;
 }
 
-.girar{
-    position: absolute;
-    top: 60%;
-    left: 60%;
+
+.divGirar{
+    position: sticky;
+    margin-top:380px;
+    margin-left: -120px;
 }
 
 /**************************************************/

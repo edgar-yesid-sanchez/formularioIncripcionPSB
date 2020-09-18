@@ -90,7 +90,7 @@ prevBtnFourth.addEventListener("click",function(){
     current -=1;
 });
 
-
+/* Imagen perfil */
 function mostrar(){
     var archivo = document.getElementById("file").files[0];
     var reader = new FileReader();
@@ -101,7 +101,9 @@ function mostrar(){
       }
     }
   }
-
+  /* ------------------------------------- */
+  
+  /* -----------Giro de la targeta-------- */
   const tarjeta = document.querySelector('#tarjeta');
   tarjeta.addEventListener('click',() => {
       tarjeta.classList.toggle('activeTarjeta')
@@ -110,7 +112,7 @@ function mostrar(){
   girara.addEventListener("click",function(){
     tarjeta.classList.toggle('activeTarjeta');
   });
-
+/* -------------------------------------------- */
 
 
 
