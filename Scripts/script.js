@@ -17,9 +17,6 @@ const bullet = document.querySelectorAll(".step .bullet");
 let max = 4;
 let current = 1;
 
-function d1(){
-    alert("funciona");
-}
 function validar(){
     var as = document.getElementsById('nombre').value;
     
@@ -105,6 +102,14 @@ function mostrar(){
     }
   }
 
+  const tarjeta = document.querySelector('#tarjeta');
+  tarjeta.addEventListener('click',() => {
+      tarjeta.classList.toggle('activeTarjeta')
+  });
+  const girara = document.querySelector('#giro');
+  girara.addEventListener("click",function(){
+    tarjeta.classList.toggle('activeTarjeta');
+  });
 
 
 
