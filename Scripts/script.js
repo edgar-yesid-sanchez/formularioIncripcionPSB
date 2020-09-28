@@ -14,6 +14,10 @@ const progressText = document.querySelectorAll(".step p");
 const progressCheck = document.querySelectorAll(".step .chek");
 const bullet = document.querySelectorAll(".step .bullet");
 
+
+
+
+
 let max = 4;
 let current = 1;
 
@@ -115,8 +119,71 @@ function mostrar(){
 /* -------------------------------------------- */
 
 
+/* -------FormularioTargetaDinamico-------------*/
+const   inputNombre = document.querySelector('#NombreInput'),
+        textNombre = document.querySelector('#tarjeta .nombreCarnet')
+      
+
+const   inputCargo = document.querySelector('#CargoInput'),
+        textCargo = document.querySelector('#tarjeta .cargo');
+
+const   inputNumeroCedula = document.querySelector('#NumCedulaInput'),
+        textoCedula = document.querySelector('#tarjeta .cedula');
+        
+const   inputDescripcion = document.querySelector('#DescripcionPersonaInput');
 
 
+inputNombre.addEventListener('keyup',(e) =>{
+    let valorInputName=(e.target.value);
+
+    inputNombre.value = valorInputName
+    //.replase(/\codigo/g,'cambio')expresion regular, lo que hace es cambiar un caracter que le mandemos por lo que le digamos buscar en https://regexr.com/ 
+    .replace(/\d/g,'')
+    .trim();
+    textNombre.textContent = valorInputName
+});
+
+inputCargo.addEventListener('keyup',(e) =>{
+    let valorInputCargo=(e.target.value);
+
+    inputCargo.value = valorInputCargo
+    //.replase(/\codigo/g,'cambio')expresion regular, lo que hace es cambiar un caracter que le mandemos por lo que le digamos buscar en https://regexr.com/ 
+    .replace(/\d/g,'')
+    .trim();
+    textCargo.textContent = valorInputCargo
+});
+
+inputNumeroCedula.addEventListener('keyup',(e) =>{
+    let valorInputCedula=(e.target.value);
+
+    inputCargo.value = valorInputCedula
+    //.replase(/\codigo/g,'cambio')expresion regular, lo que hace es cambiar un caracter que le mandemos por lo que le digamos buscar en https://regexr.com/ 
+    .replace(/[a-z]\/g,'')
+    .trim();
+    textCargo.textContent = valorInputCedula
+});
+
+/* -----------------------------------------    */
+
+
+/*-----------Colocasion Dinamica Fecha Vencimineto----------*/
+const seleciontMes = document.querySelector('#selectMes');
+const seleciontYear = document.querySelector('#selectYear');
+
+for(let i=0;i<=12;i++){
+    let opcion = document.createElement('option');
+    opcion.value=i;
+    opcion.innerText=i;
+    seleciontMes.appendChild(opcion); 
+}
+const yearActual = new Date().getFullYear();
+for(let i = yearActual; i<= (yearActual+8);i++){
+    let opcion = document.createElement('option');
+    opcion.value=i;
+    opcion.innerText=i;
+    seleciontYear.appendChild(opcion);
+}
+/*------------------------------------------------  */
 
 
 

@@ -203,7 +203,7 @@
             </div>
     <!---------------------- PAGINA4 CARNETETE ------------------>
             <div class="sectionCarnet">
-                <section  onclick="val()" class="tarjeta" id="tarjeta">
+                <section  class="tarjeta" id="tarjeta">
                     <div class="delantera">   
                         <div class="imgPerfil">
                             <img class="img" id="img"/>
@@ -240,12 +240,38 @@
                     </div>         
                 </section>
                 <div class="divGirar">
-                    <button class="girar" id="giro">giroTarjeta</button>
+                    <button class="girar" id="giro"><i class="fas fa-share fa-flip-vertical fa-3x"></i></button>
                 </div>
-                <div>
+                <div class="divFormularioTarjeta" id="formularioTarjeta">
+                    <div class="InfoInput">
+                        <label class="labelInput" for="NombreInput">Nombre</label>
+                        <input tipe="text" id="NombreInput" autocomplete="off" maxlength="42"> 
+                    </div>
+                    <div class="InfoInput">
+                        <label class="labelInput" for="CargoInput">Cargo</label>
+                        <input tipe="text" id="CargoInput" autocomplete="off" maxlength="42"> 
+                    </div>
+                    <div class="InfoInput">
+                        <label class="labelInput" for="NumCedulaInput">NumCedula </label>
+                        <input tipe="text" id="NumCedulaInput" autocomplete="off"maxlength="15"> 
+                    </div>
+                    <div class="InfoInput">
+                        <label class="labelInput" for="DescripcionPersonaInput">DescripcionPersonal </label>
+                        <input tipe="text" id="DescripcionPersonaInput" autocomplete="off" maxlength="300"> 
+                    </div>
+                    <div class="InfoInput">
+                        <label class="labelInput" for="FechaVencimiento">FechaVencimiento </label>
+                        <div class="selectsVensimiento" id="selectVensimiento">
+                            <select class="selectFecha" name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+                            </select>
+                            <select class="selectFecha" name="year" id="selectYear">
+                                <option disabled selected>Año</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <input type="file" id="file" accept="image/*" onchange="mostrar()"/>
-                    <br>
-                    
                     <div class="buttonform">
                         <button class="prev-3">Anterior</button>
                         <button class="submit">Siguiente</button>

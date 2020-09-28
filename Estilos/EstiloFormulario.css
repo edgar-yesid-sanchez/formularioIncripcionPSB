@@ -42,20 +42,22 @@ color: #8eb38e;
         border-color: #8eb336;
         background-color: #daf34b;
     }
+    
     .progresbar .step .bullet:before,
     .progresbar .step .bullet:after{
         position: absolute;
         content: '';
         bottom: 11px;
-        right: -265px;
+        right: -172px;
         height: 6px;
         border-radius: 10%;
-        width: 260px;
-       /*  background: #262626; */
+        width: 167px;
+        /*  background: #262626; */
     }
+   
     .progresbar .step:last-child .bullet:before,
     .progresbar .step:last-child .bullet:after{
-        display: none;
+        display: block;
     }
     .progresbar .step .bullet.active:after{
         background: #789c3d;
@@ -97,6 +99,7 @@ body{
     background-color: lavender;
 }
 .slidepage{
+
 }
 .form{
     display: flex;
@@ -115,7 +118,7 @@ body{
     display: flex;
     justify-content: space-around;
     margin-right: 200px;
-    /* cambiar a 200 */    margin-left: 200px;
+    /* cambiar a 200 */    margin-left: -2000px;
     padding: 12px 40px;
     background: #8eb336;
     width: 100%;
@@ -369,9 +372,12 @@ justify-items: center;
 .delantera .grupo .cargo,
 .delantera .grupo .cedula{
     color: #fff;
+    width: 100%;
     font-size: 22px;
     text-transform: uppercase;
 }
+
+
 
 
       /* trasera */
@@ -409,9 +415,32 @@ justify-items: center;
 
 
 .divGirar{
-    position: sticky;
-    margin-top:380px;
-    margin-left: -120px;
+ display: flex;
+ align-items: center;
+ z-index: 3;
+ margin-left: -28px;
+}
+.divGirar button{
+    max-height: 20px;
+    display: contents ;
+}
+
+
+.divFormularioTarjeta{
+    background: red;
+    margin: auto 130px auto 34px;
+    padding: 5px;
+}
+
+.selectsVensimiento{
+    display: flex;
+    width: 45%;
+}
+.selectFecha{
+    width: 100%;
+    margin: 20px 5px;
+    border: 1 solid black;
+    border-radius: 3px;
 }
 
 /**************************************************/
