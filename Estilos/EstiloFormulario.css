@@ -427,9 +427,10 @@ justify-items: center;
 
 
 .divFormularioTarjeta{
-    background: red;
+    background: rgb(186, 212, 194);
     margin: auto 130px auto 34px;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .selectsVensimiento{
@@ -441,6 +442,13 @@ justify-items: center;
     margin: 20px 5px;
     border: 1 solid black;
     border-radius: 3px;
+}
+
+.selecionarImg{
+    width: auto;
+    
+    height: auto !important;
+    margin: 0px 70px !important;
 }
 
 /**************************************************/
@@ -478,7 +486,7 @@ justify-items: center;
 .form input{
     height: 30px;
     margin: auto ;
-    border: 1px solid gray ;
+    border: 2px solid gray ;
     border-radius: 3px;
 }
 

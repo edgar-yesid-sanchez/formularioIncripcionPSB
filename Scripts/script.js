@@ -105,7 +105,7 @@ function mostrar(){
       }
     }
   }
-  /* ------------------------------------- */
+  /*---------------------------------------*/
   
   /* -----------Giro de la targeta-------- */
   const tarjeta = document.querySelector('#tarjeta');
@@ -156,11 +156,11 @@ inputCargo.addEventListener('keyup',(e) =>{
 inputNumeroCedula.addEventListener('keyup',(e) =>{
     let valorInputCedula=(e.target.value);
 
-    inputCargo.value = valorInputCedula
+    inputNumeroCedula.value = valorInputCedula
     //.replase(/\codigo/g,'cambio')expresion regular, lo que hace es cambiar un caracter que le mandemos por lo que le digamos buscar en https://regexr.com/ 
-    .replace(/[a-z]\/g,'')
+    .replace(/\s/g,'')
     .trim();
-    textCargo.textContent = valorInputCedula
+    textoCedula.textContent = valorInputCedula
 });
 
 /* -----------------------------------------    */
